@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/idPic"
+        android:src="@drawable/psms" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Title"
+        android:text="Title"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/idPic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idDescription"
+        android:text="Deskripsi disini"
+        android:layout_below="@id/Title"
+        android:layout_toRightOf="@id/idPic"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idJadwal"
+        android:text="Deskripsi disini"
+        android:layout_below="@id/idPic"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

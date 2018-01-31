@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class CounterActivity extends AppCompatActivity {
 
-    Button point_persija, point_persib, reset, min_persib, min_persija,show_news,show_maps;
+    Button point_persija, point_persib, reset, min_persib, min_persija,show_news,show_maps,list_club;
     TextView txt_persija, txt_persib;
     int pointPersija = 0, pointPersib = 0;
     String convertPoint;
@@ -33,6 +33,7 @@ public class CounterActivity extends AppCompatActivity {
         min_persija = findViewById(R.id.min_persija);
         show_news = findViewById(R.id.show_news);
         show_maps = findViewById(R.id.show_maps);
+        list_club = findViewById(R.id.list_club);
 
         point_persija.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,6 +116,14 @@ public class CounterActivity extends AppCompatActivity {
                 Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                         Uri.parse("geo:0,0?q=-6.219839,106.802525 (" + name + ")"));
                 startActivity(intent);
+            }
+        });
+        list_club.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CounterActivity.this, ListClubActivity.class);
+                startActivity(intent);
+                Toast.makeText(CounterActivity.this, "Anda Melihat list Club Liga Indonesia", Toast.LENGTH_SHORT).show();
             }
         });
 
