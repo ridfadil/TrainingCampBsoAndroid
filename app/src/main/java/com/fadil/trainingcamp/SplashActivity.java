@@ -17,11 +17,10 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //menghilangkan ActionBar
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //remove bar
         setContentView(R.layout.activity_splash);
-
-        tvSplash = (TextView) findViewById(R.id.tvSplash);
+        tvSplash = findViewById(R.id.tvSplash);
 
 
         final Handler handler = new Handler();
@@ -31,6 +30,6 @@ public class SplashActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), CounterActivity.class));
                 finish();
             }
-        }, 3000L); //3000 L = 3 detik
+        }, 3000L);
     }
 }
