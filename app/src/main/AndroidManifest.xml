@@ -23,7 +23,11 @@
         <activity android:name=".ListClubActivity" />
         <activity android:name=".CounterActivity" />
         <activity android:name=".RecyclerListActivity" />
-        <activity android:name=".ListPertandinganActivity"></activity>
+        <activity android:name=".ListPertandinganActivity" />
+        <activity
+            android:name=".NavBarActivity"
+            android:label="@string/title_activity_nav_bar"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

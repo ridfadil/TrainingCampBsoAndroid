@@ -58,7 +58,7 @@ public class ListPertandinganAdapter extends RecyclerView.Adapter<ListPertanding
     }
 
     public class ListPertandinganViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        private TextView tvTimSatu, tvTimDua, tvVs,home,away;
+        private TextView tvTimSatu, tvTimDua, tvVs, home, away;
         private ImageView logoTimSatu, logoTimDua;
 
         final ListPertandinganAdapter mAdapter;
@@ -85,7 +85,7 @@ public class ListPertandinganAdapter extends RecyclerView.Adapter<ListPertanding
 
             //intent ke main activity dengan passing data
             Intent i = new Intent(context, CounterActivity.class);
-            i.putExtra("namaTimSatu", element.getTimSatu());
+            i.putExtra("namTimSatu", element.getTimSatu());
             i.putExtra("namaTimDua", element.getTimDua());
             i.putExtra("logoTimSatu", element.getLogoTimSatu());
             i.putExtra("logoTimDua", element.getLogoTimDua());
@@ -93,5 +93,4 @@ public class ListPertandinganAdapter extends RecyclerView.Adapter<ListPertanding
             mAdapter.notifyDataSetChanged();
         }
     }
-
 }

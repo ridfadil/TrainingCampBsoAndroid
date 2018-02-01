@@ -47,7 +47,7 @@ public class CounterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Counter Board");
 
         //untuk mengatur view dan menerima passing data dari intent sebelumnya
-        txt_persija_list.setText(getIntent().getStringExtra("namaTimSatu"));
+        txt_persija_list.setText(getIntent().getStringExtra("namTimSatu"));
         txt_persib_list.setText(getIntent().getStringExtra("namaTimDua"));
         detail_persija.setImageResource(getIntent().getIntExtra("logoTimSatu",0));
         detail_persib.setImageResource(getIntent().getIntExtra("logoTimDua",0));
