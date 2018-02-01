@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,6 +18,10 @@ public class CounterActivity extends AppCompatActivity {
     int pointPersija = 0, pointPersib = 0;
     String convertPoint;
     ImageView detail_persib, detail_persija;
+    ImageView logoTimSatu, logoTimDua;
+    TextView namaTimSatu, namaTimDua;
+
+    int scorePersib, scorePersija;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +39,18 @@ public class CounterActivity extends AppCompatActivity {
         show_news = findViewById(R.id.show_news);
         show_maps = findViewById(R.id.show_maps);
         list_club = findViewById(R.id.list_club);
+
+        //untuk enampilkan back button
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Counter Board");
+
+        //untuk mengatur view dan menerima passing data dari intent sebelumnya
+        txt_persija.setText(getIntent().getStringExtra("namaTimSatu"));
+        txt_persib.setText(getIntent().getStringExtra("namaTimDua"));
+        detail_persija.setImageResource(getIntent().getIntExtra("logoTimSatu",0));
+        detail_persib.setImageResource(getIntent().getIntExtra("logoTimDua",0));
+
+
 
         point_persija.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,5 +182,13 @@ public class CounterActivity extends AppCompatActivity {
             Toast.makeText(CounterActivity.this, "Wrong Point", Toast.LENGTH_SHORT).show();
         }
         return pointPersib;
+    }
+    //fungsi back ketika tombol back diklik
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

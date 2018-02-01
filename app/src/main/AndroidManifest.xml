@@ -22,7 +22,8 @@
         <activity android:name=".DetailPersijaActivity" />
         <activity android:name=".ListClubActivity" />
         <activity android:name=".CounterActivity" />
-        <activity android:name=".RecyclerListActivity"></activity>
+        <activity android:name=".RecyclerListActivity" />
+        <activity android:name=".ListPertandinganActivity"></activity>
     </application>
 
 </manifest>
