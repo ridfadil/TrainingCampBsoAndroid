@@ -9,7 +9,7 @@ import java.util.LinkedList;
 
 public class ListPertandinganActivity extends AppCompatActivity {
 
-    private final LinkedList<Pertandingan> listPertandingan = new LinkedList<>();
+    private final LinkedList<ModelPertandingan> listPertandingan = new LinkedList<>();
 
     private RecyclerView mRecyclerView;
     private ListPertandinganAdapter mAdapter;
@@ -20,10 +20,9 @@ public class ListPertandinganActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_pertandingan);
 
         //set data
-        listPertandingan.addLast(new Pertandingan("Persija","Persib", R.drawable.persib, R.drawable.persija));
-        listPertandingan.addLast(new Pertandingan("Persib","PSM", R.drawable.persib, R.drawable.persija));
-        listPertandingan.addLast(new Pertandingan("Persib","Persipura", R.drawable.persib, R.drawable.persija));
-        listPertandingan.addLast(new Pertandingan("Persib","Sriwijaya FC", R.drawable.persib, R.drawable.persija));
+        listPertandingan.addLast(new ModelPertandingan("Persija"," Persib", R.drawable.persija, R.drawable.persib));
+        listPertandingan.addLast(new ModelPertandingan("Psms","Arema", R.drawable.psms, R.drawable.arema));
+        listPertandingan.addLast(new ModelPertandingan("Sriwijaya","Persib", R.drawable.sriwijaya, R.drawable.persib));
 
         mRecyclerView = (RecyclerView) findViewById(R.id.list_pertandingan_cyc);
 

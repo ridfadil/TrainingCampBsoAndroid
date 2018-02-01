@@ -22,7 +22,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PERSIJA JAKARTA"
-                android:id="@+id/txt_persija"/>
+                android:id="@+id/txt_persija_list"/>
 
             <ImageView
                 android:id="@+id/detail_persija"
@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="PERSIB BANDUNG"
-                android:id="@+id/txt_persib"/>
+                android:id="@+id/txt_persib_list"/>
         </LinearLayout>
 
         <android.support.v7.widget.CardView

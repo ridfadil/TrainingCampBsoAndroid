@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class CounterActivity extends AppCompatActivity {
 
     Button point_persija, point_persib, reset, min_persib, min_persija,show_news,show_maps,list_club;
-    TextView txt_persija, txt_persib;
+    TextView txt_persija, txt_persib,txt_persija_list,txt_persib_list;
     int pointPersija = 0, pointPersib = 0;
     String convertPoint;
     ImageView detail_persib, detail_persija;
@@ -39,14 +39,16 @@ public class CounterActivity extends AppCompatActivity {
         show_news = findViewById(R.id.show_news);
         show_maps = findViewById(R.id.show_maps);
         list_club = findViewById(R.id.list_club);
+        txt_persib_list = findViewById(R.id.txt_persib_list);
+        txt_persija_list = findViewById(R.id.txt_persija_list);
 
         //untuk enampilkan back button
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Counter Board");
 
         //untuk mengatur view dan menerima passing data dari intent sebelumnya
-        txt_persija.setText(getIntent().getStringExtra("namaTimSatu"));
-        txt_persib.setText(getIntent().getStringExtra("namaTimDua"));
+        txt_persija_list.setText(getIntent().getStringExtra("namaTimSatu"));
+        txt_persib_list.setText(getIntent().getStringExtra("namaTimDua"));
         detail_persija.setImageResource(getIntent().getIntExtra("logoTimSatu",0));
         detail_persib.setImageResource(getIntent().getIntExtra("logoTimDua",0));
 
